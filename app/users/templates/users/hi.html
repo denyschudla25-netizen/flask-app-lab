@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Привіт, {{ name }}!</h1>
+    <p>Вік: {{ age }}</p>
+
+    <nav>
+        <a href="{{ url_for('home') }}">Головна</a>
+        <a href="{{ url_for('products.products_list') }}">Товари</a>
+    </nav>
+</div>
+{% endblock %}

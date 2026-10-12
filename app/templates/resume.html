@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1>Моє резюме</h1>
+        <p class="lead">
+            Ласкаво прошу на мою сторінку резюме
+        </p>
+    </div>
+
+    <section id="about" class="resume-section">
+        <div class="row align-items-center">
+
+            <div class="col-md-4 text-center mb-4">
+                <img
+                    src="{{ url_for('static', filename='images/photo.jpg') }}"
+                    alt="Моє фото"
+                    class="profile-photo"
+                >
+            </div>
+
+            <div class="col-md-8">
+                <h2>Про себе</h2>
+                <p>
+                    Мене звати Денис. Я студент, який цікавиться
+                    програмуванням, веброзробкою та сучасними технологіями.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="education" class="resume-section">
+        <h2>Освіта</h2>
+        <p>
+            Навчаюсь у закладі вищої освіти за напрямом,
+            пов'язаним з інформаційними технологіями.
+        </p>
+    </section>
+
+    <section id="skills" class="resume-section">
+        <h2>Навички</h2>
+
+        <ul>
+            <li>HTML та CSS</li>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>Git та GitHub</li>
+            <li>Основи веброзробки</li>
+        </ul>
+    </section>
+
+    <section id="technologies" class="resume-section">
+        <h2>Технології</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5>Python</h5>
+                        <p>Мова програмування для створення вебдодатків.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5>Flask</h5>
+                        <p>Мікрофреймворк для веброзробки на Python.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5>Bootstrap</h5>
+                        <p>CSS-фреймворк для створення адаптивного дизайну.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="resume-section">
+        <h2>Досвід роботи / Проекти</h2>
+
+        <div class="card">
+            <div class="card-body">
+                <h5>Flask-проект</h5>
+                <p>
+                    Розробка вебдодатків на Flask, робота з шаблонами
+                    Jinja2, Git та розгортанням вебдодатків.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Лабораторна робота 3</h1>
+    <h2>Модульна структура. Blueprints</h2>
+
+    <p>Мій Flask-застосунок використовує модульну структуру.</p>
+
+    <ul>
+        <li><a href="{{ url_for('resume') }}">Резюме</a></li>
+        <li><a href="{{ url_for('contacts') }}">Контакти</a></li>
+        <li><a href="{{ url_for('users.greetings', name='John') }}">Привітання користувача</a></li>
+        <li><a href="{{ url_for('products.products_list') }}">Список товарів</a></li>
+    </ul>
+</div>
+{% endblock %}

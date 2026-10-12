@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1>Контакти</h1>
+        <p class="lead">
+            Зв'яжіться зі мною за допомогою форми
+        </p>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-8">
+
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+
+                    <form method="POST">
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">
+                                Ім'я
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                name="name"
+                                placeholder="Введіть ваше ім'я"
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                placeholder="example@gmail.com"
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">
+                                Повідомлення
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Введіть повідомлення">
+                            </textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Надіслати
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
