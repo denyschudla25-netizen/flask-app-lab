@@ -57,3 +57,33 @@ footer {
         font-size: 26px;
     }
 }
+/* Темна тема */
+body.dark-theme {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Картки */
+body.dark-theme .card {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border-color: #444;
+}
+
+/* Поля введення */
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+    background-color: #2b2b2b;
+    color: #fff;
+    border-color: #555;
+}
+
+/* Посилання */
+body.dark-theme a {
+    color: #8ab4f8;
+}
+
+/* Основний контейнер */
+body.dark-theme main {
+    color: #f1f1f1;
+}

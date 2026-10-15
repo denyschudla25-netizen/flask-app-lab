@@ -1,0 +1,62 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">Керування cookies</h1>
+
+        <form method="POST" class="mb-4">
+            <input type="hidden" name="action" value="add">
+
+            <div class="mb-3">
+                <label class="form-label">Назва cookie</label>
+                <input name="name" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Значення cookie</label>
+                <input name="value" class="form-control" required>
+            </div>
+
+            <button class="btn btn-primary" type="submit">
+                Додати cookie
+            </button>
+        </form>
+
+        <h2 class="h4">Збережені cookies</h2>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Назва</th>
+                    <th>Значення</th>
+                    <th>Дія</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for name, value in cookies.items() %}
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>{{ value }}</td>
+                    <td>
+                        <form method="POST">
+                            <input type="hidden" name="action" value="delete">
+                            <input type="hidden" name="name" value="{{ name }}">
+                            <button class="btn btn-danger btn-sm" type="submit">
+                                Видалити
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="3">Cookies поки немає</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

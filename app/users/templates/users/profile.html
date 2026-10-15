@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card {% if theme == 'dark' %}bg-dark text-light{% endif %}">
+    <div class="card-body">
+        <h1 class="card-title">Профіль</h1>
+
+        <p class="fs-4">
+            Ласкаво просимо до сторінки, {{ username }}!
+        </p>
+
+        <p>Ви успішно увійшли в систему.</p>
+
+        <h2 class="h5">Кольорова схема профілю</h2>
+
+        <form method="POST" action="{{ url_for('users.change_theme') }}">
+            <button
+                type="submit"
+                name="theme"
+                value="light"
+                class="btn btn-outline-primary me-2"
+            >
+                Світла
+            </button>
+
+            <button
+                type="submit"
+                name="theme"
+                value="dark"
+                class="btn btn-dark"
+            >
+                Темна
+            </button>
+        </form>
+
+        <hr>
+
+        <a href="{{ url_for('cookies') }}" class="btn btn-secondary">
+            Керування cookies
+        </a>
+
+        <a href="{{ url_for('users.logout') }}" class="btn btn-danger">
+            Вийти
+        </a>
+    </div>
+</div>
+{% endblock %}
