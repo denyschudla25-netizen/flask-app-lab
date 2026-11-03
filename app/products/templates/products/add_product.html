@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+{% from "macros.html" import render_field %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+
+    <h1 class="mb-4">Додавання товару</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        {{ form.hidden_tag() }}
+
+        {{ render_field(form.name) }}
+        {{ render_field(form.content) }}
+        {{ render_field(form.price) }}
+        {{ render_field(form.category) }}
+        {{ render_field(form.quantity) }}
+        {{ render_field(form.image) }}
+
+        {{ form.submit(class="btn btn-success") }}
+
+        <a href="{{ url_for('products.products_list') }}"
+           class="btn btn-secondary">
+            Назад
+        </a>
+
+    </form>
+
+</div>
+
+{% endblock %}

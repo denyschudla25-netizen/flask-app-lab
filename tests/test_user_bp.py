@@ -30,16 +30,15 @@ class FlaskAppTestCase(unittest.TestCase):
         response = self.client.get("/products/")
 
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b"Laptop", response.data)
-        self.assertIn(b"Phone", response.data)
-        self.assertIn(b"PC", response.data)
+        self.assertIn("ASUS TUF Gaming F15".encode(), response.data)
+        self.assertIn("Logitech G102".encode(), response.data)
 
     def test_product_detail(self):
         response = self.client.get("/products/1")
 
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b"Laptop", response.data)
-        self.assertIn(b"1200", response.data)
+        self.assertIn("ASUS TUF Gaming F15".encode(), response.data)
+        self.assertIn(b"32999", response.data)
 
     def test_product_not_found(self):
         response = self.client.get("/products/999")

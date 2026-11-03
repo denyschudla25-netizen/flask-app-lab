@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
 
@@ -41,7 +42,7 @@
                     </a>
                 </li>
 
-                <!-- Нові посилання для лабораторної №4 -->
+                <!-- Лабораторна №4 -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('users.login') }}">
                         Вхід
@@ -53,9 +54,26 @@
                         Профіль
                     </a>
                 </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('cookies') }}">
-                         Cookies
+                        Cookies
                     </a>
+                </li>
+
+                <!-- Лабораторна №5 -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('contact') }}">
+                        Контактна форма
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('products.products_list') }}">
+                        Товари
+                    </a>
+                </li>
+
             </ul>
         </div>
 

@@ -1,14 +1,84 @@
 
 {% extends "base.html" %}
 
-{% block content %}
-<div class="container">
-    <h1>{{ product.name }}</h1>
-    <p>Ціна: {{ product.price }} $</p>
-    <p>{{ product.content }}</p>
+{% block title %}{{ product.name }}{% endblock %}
 
-    <a href="{{ url_for('products.products_list') }}">
-        Повернутися до списку товарів
+{% block content %}
+<div class="container mt-4">
+
+    <a href="{{ url_for('products.products_list') }}"
+       class="btn btn-secondary mb-3">
+        ← Назад до товарів
     </a>
+
+    <div class="card shadow">
+        <div class="row g-0">
+
+            <div class="col-md-5 p-3">
+                {% if product.image %}
+                    <img
+                        src="{{ url_for('products.static', filename=product.image) }}"
+                        class="img-fluid rounded"
+                        alt="{{ product.name }}"
+                    >
+                {% else %}
+                    <p>Зображення відсутнє</p>
+                {% endif %}
+            </div>
+
+            <div class="col-md-7">
+                <div class="card-body">
+
+                    <h2>{{ product.name }}</h2>
+
+                    <p><strong>Категорія:</strong>
+                        {{ product.category }}
+                    </p>
+
+                    <p><strong>Опис:</strong>
+                        {{ product.content }}
+                    </p>
+
+                    <h4 class="text-success">
+                        {{ product.price }} грн
+                    </h4>
+
+                    <p><strong>Кількість:</strong>
+                        {{ product.quantity }}
+                    </p>
+
+                    <p><strong>Дата створення:</strong>
+                        {{ product.created_at }}
+                    </p>
+
+                    <div class="d-flex gap-2 mt-4">
+
+                        <a
+                            href="{{ url_for('products.edit_product', product_id=product.id) }}"
+                            class="btn btn-warning"
+                        >
+                            Змінити товар
+                        </a>
+
+                        <form
+                            action="{{ url_for('products.delete_product', product_id=product.id) }}"
+                            method="POST"
+                            onsubmit="return confirm('Точно видалити цей товар?');"
+                        >
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+                            <button type="submit" class="btn btn-danger">
+                                Видалити товар
+                            </button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>
 {% endblock %}

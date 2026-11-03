@@ -1,0 +1,85 @@
+2026-11-03 20:22:22,191 - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+2026-11-03 20:22:22,191 - Press CTRL+C to quit
+2026-11-03 20:22:22,193 -  * Restarting with stat
+2026-11-03 20:22:22,621 -  * Debugger is active!
+2026-11-03 20:22:22,626 -  * Debugger PIN: 956-344-593
+2026-11-03 20:22:29,047 - 127.0.0.1 - - [03/Nov/2026 20:22:29] "GET /contact HTTP/1.1" 500 -
+2026-11-03 20:22:29,160 - 127.0.0.1 - - [03/Nov/2026 20:22:29] "GET /contact?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-11-03 20:22:29,175 - 127.0.0.1 - - [03/Nov/2026 20:22:29] "GET /contact?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-11-03 20:22:29,248 - 127.0.0.1 - - [03/Nov/2026 20:22:29] "GET /contact?__debugger__=yes&cmd=resource&f=console.png&s=BArqCUTuGpNfwUsoGtve HTTP/1.1" 200 -
+2026-11-03 20:22:29,267 - 127.0.0.1 - - [03/Nov/2026 20:22:29] "GET /contact?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-11-03 20:23:49,002 - 127.0.0.1 - - [03/Nov/2026 20:23:49] "GET /contact HTTP/1.1" 200 -
+2026-11-03 20:23:49,054 - 127.0.0.1 - - [03/Nov/2026 20:23:49] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:23:49,121 - 127.0.0.1 - - [03/Nov/2026 20:23:49] "GET /favicon.ico HTTP/1.1" 404 -
+2026-11-03 20:24:40,912 - Ім'я: Денис Чудла | Email: denys.chudla.25@cnu.edu.ua | Тема: cooperation | Повідомлення: Тест
+ауауау
+2026-11-03 20:24:40,912 - 127.0.0.1 - - [03/Nov/2026 20:24:40] "POST /contact HTTP/1.1" 302 -
+2026-11-03 20:24:40,920 - 127.0.0.1 - - [03/Nov/2026 20:24:40] "GET /contact HTTP/1.1" 200 -
+2026-11-03 20:24:40,947 - 127.0.0.1 - - [03/Nov/2026 20:24:40] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:45:01,425 -  * Debugger is active!
+2026-11-03 20:45:01,428 -  * Debugger PIN: 956-344-593
+2026-11-03 20:45:10,521 - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+2026-11-03 20:45:10,522 - Press CTRL+C to quit
+2026-11-03 20:45:10,523 -  * Restarting with stat
+2026-11-03 20:45:11,315 -  * Debugger is active!
+2026-11-03 20:45:11,321 -  * Debugger PIN: 956-344-593
+2026-11-03 20:45:16,792 - 127.0.0.1 - - [03/Nov/2026 20:45:16] "GET /product HTTP/1.1" 200 -
+2026-11-03 20:45:16,862 - 127.0.0.1 - - [03/Nov/2026 20:45:16] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:45:19,004 - 127.0.0.1 - - [03/Nov/2026 20:45:19] "GET /product/add HTTP/1.1" 200 -
+2026-11-03 20:45:19,029 - 127.0.0.1 - - [03/Nov/2026 20:45:19] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:45:29,291 - 127.0.0.1 - - [03/Nov/2026 20:45:29] "GET /contact HTTP/1.1" 200 -
+2026-11-03 20:45:29,318 - 127.0.0.1 - - [03/Nov/2026 20:45:29] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:45:40,637 - 127.0.0.1 - - [03/Nov/2026 20:45:40] "GET /products HTTP/1.1" 200 -
+2026-11-03 20:45:40,662 - 127.0.0.1 - - [03/Nov/2026 20:45:40] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:45:41,505 - 127.0.0.1 - - [03/Nov/2026 20:45:41] "GET /product/add HTTP/1.1" 200 -
+2026-11-03 20:45:41,539 - 127.0.0.1 - - [03/Nov/2026 20:45:41] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:47:06,897 - 127.0.0.1 - - [03/Nov/2026 20:47:06] "POST /product/add HTTP/1.1" 302 -
+2026-11-03 20:47:06,905 - 127.0.0.1 - - [03/Nov/2026 20:47:06] "GET /products HTTP/1.1" 200 -
+2026-11-03 20:47:06,933 - 127.0.0.1 - - [03/Nov/2026 20:47:06] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:47:06,941 - 127.0.0.1 - - [03/Nov/2026 20:47:06] "GET /products/static/uploads/9bf390f5cac14469af9713c791d09643.jpg HTTP/1.1" 200 -
+2026-11-03 20:47:22,694 - 127.0.0.1 - - [03/Nov/2026 20:47:22] "GET /product/1 HTTP/1.1" 500 -
+2026-11-03 20:47:22,721 - 127.0.0.1 - - [03/Nov/2026 20:47:22] "GET /product/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-11-03 20:47:22,723 - 127.0.0.1 - - [03/Nov/2026 20:47:22] "GET /product/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-11-03 20:47:22,742 - 127.0.0.1 - - [03/Nov/2026 20:47:22] "GET /product/1?__debugger__=yes&cmd=resource&f=console.png&s=Apb32SdxDHEaMLYF3cNp HTTP/1.1" 200 -
+2026-11-03 20:47:22,756 - 127.0.0.1 - - [03/Nov/2026 20:47:22] "GET /product/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-11-03 20:51:23,922 - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+2026-11-03 20:51:23,923 - Press CTRL+C to quit
+2026-11-03 20:51:23,924 -  * Restarting with stat
+2026-11-03 20:51:24,565 -  * Debugger is active!
+2026-11-03 20:51:24,570 -  * Debugger PIN: 956-344-593
+2026-11-03 20:51:28,088 - 127.0.0.1 - - [03/Nov/2026 20:51:28] "GET /product?utm_source=chatgpt.com HTTP/1.1" 200 -
+2026-11-03 20:51:28,199 - 127.0.0.1 - - [03/Nov/2026 20:51:28] "GET /products/static/uploads/9bf390f5cac14469af9713c791d09643.jpg HTTP/1.1" 304 -
+2026-11-03 20:51:28,201 - 127.0.0.1 - - [03/Nov/2026 20:51:28] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:51:28,541 - 127.0.0.1 - - [03/Nov/2026 20:51:28] "GET /product/add?utm_source=chatgpt.com HTTP/1.1" 200 -
+2026-11-03 20:51:28,564 - 127.0.0.1 - - [03/Nov/2026 20:51:28] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:51:28,975 - 127.0.0.1 - - [03/Nov/2026 20:51:28] "GET /product/1?utm_source=chatgpt.com HTTP/1.1" 200 -
+2026-11-03 20:51:29,003 - 127.0.0.1 - - [03/Nov/2026 20:51:29] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:51:29,007 - 127.0.0.1 - - [03/Nov/2026 20:51:29] "GET /products/static/uploads/9bf390f5cac14469af9713c791d09643.jpg HTTP/1.1" 304 -
+2026-11-03 20:51:42,646 - 127.0.0.1 - - [03/Nov/2026 20:51:42] "GET /product/1 HTTP/1.1" 200 -
+2026-11-03 20:51:42,670 - 127.0.0.1 - - [03/Nov/2026 20:51:42] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:51:42,671 - 127.0.0.1 - - [03/Nov/2026 20:51:42] "GET /products/static/uploads/9bf390f5cac14469af9713c791d09643.jpg HTTP/1.1" 304 -
+2026-11-03 20:51:48,069 - 127.0.0.1 - - [03/Nov/2026 20:51:48] "GET /product/1/edit HTTP/1.1" 200 -
+2026-11-03 20:51:48,107 - 127.0.0.1 - - [03/Nov/2026 20:51:48] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:52:09,930 - 127.0.0.1 - - [03/Nov/2026 20:52:09] "POST /product/1/delete HTTP/1.1" 302 -
+2026-11-03 20:52:09,936 - 127.0.0.1 - - [03/Nov/2026 20:52:09] "GET /products HTTP/1.1" 200 -
+2026-11-03 20:52:09,958 - 127.0.0.1 - - [03/Nov/2026 20:52:09] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:52:10,832 - 127.0.0.1 - - [03/Nov/2026 20:52:10] "GET /product/add HTTP/1.1" 200 -
+2026-11-03 20:52:10,863 - 127.0.0.1 - - [03/Nov/2026 20:52:10] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:52:34,224 - 127.0.0.1 - - [03/Nov/2026 20:52:34] "POST /product/add HTTP/1.1" 302 -
+2026-11-03 20:52:34,230 - 127.0.0.1 - - [03/Nov/2026 20:52:34] "GET /products HTTP/1.1" 200 -
+2026-11-03 20:52:34,260 - 127.0.0.1 - - [03/Nov/2026 20:52:34] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:52:34,270 - 127.0.0.1 - - [03/Nov/2026 20:52:34] "GET /products/static/uploads/154c31438b8748899aed33d646c6e57e.jpg HTTP/1.1" 200 -
+2026-11-03 20:52:56,575 - 127.0.0.1 - - [03/Nov/2026 20:52:56] "GET /product/add HTTP/1.1" 200 -
+2026-11-03 20:52:56,604 - 127.0.0.1 - - [03/Nov/2026 20:52:56] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:53:41,569 - 127.0.0.1 - - [03/Nov/2026 20:53:41] "POST /product/add HTTP/1.1" 302 -
+2026-11-03 20:53:41,578 - 127.0.0.1 - - [03/Nov/2026 20:53:41] "GET /products HTTP/1.1" 200 -
+2026-11-03 20:53:41,609 - 127.0.0.1 - - [03/Nov/2026 20:53:41] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-11-03 20:53:41,613 - 127.0.0.1 - - [03/Nov/2026 20:53:41] "GET /products/static/uploads/154c31438b8748899aed33d646c6e57e.jpg HTTP/1.1" 304 -
+2026-11-03 20:53:41,622 - 127.0.0.1 - - [03/Nov/2026 20:53:41] "GET /products/static/uploads/df7f3dd4e9be4e7fa0d93aff5b5f432f.jpg HTTP/1.1" 200 -
+2026-11-03 20:55:19,562 -  * Detected change in 'C:\\Users\\nnggn\\OneDrive\\Робочий стіл\\flask_app_chudla\\tests\\test_products.py', reloading
+2026-11-03 20:55:19,625 -  * Restarting with stat
+2026-11-03 20:55:20,089 -  * Debugger is active!
+2026-11-03 20:55:20,094 -  * Debugger PIN: 956-344-593
