@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% from "macros/forms.html" import render_field %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<h1 class="mb-4">{{ title }}</h1>
+
+<form method="POST">
+
+    {{ form.hidden_tag() }}
+
+    {{ render_field(form.title) }}
+
+    {{ render_field(form.content) }}
+
+    <div class="mb-3">
+        {{ form.category.label(class="form-label") }}
+        {{ form.category(class="form-select") }}
+
+        {% for error in form.category.errors %}
+            <div class="text-danger small">{{ error }}</div>
+        {% endfor %}
+    </div>
+
+    <div class="mb-3">
+        {{ form.publish_date.label(class="form-label") }}
+        {{ form.publish_date(class="form-control") }}
+    </div>
+
+    <div class="form-check mb-3">
+        {{ form.enabled(class="form-check-input") }}
+        {{ form.enabled.label(class="form-check-label") }}
+    </div>
+
+    {{ form.submit(class="btn btn-success") }}
+
+    <a href="{{ url_for('posts.all_posts') }}"
+       class="btn btn-secondary">
+        Назад
+    </a>
+
+</form>
+
+{% endblock %}

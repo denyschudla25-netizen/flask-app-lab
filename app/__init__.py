@@ -1,17 +1,34 @@
+from flask import Flask, render_template
 
-from flask import Flask
-from flask_wtf.csrf import CSRFProtect
+from app.config import configurations
+from app.extensions import db, migrate, csrf
 
-app = Flask(__name__)
 
-app.config["SECRET_KEY"] = "lab5-secret-key-change-later"
-app.config["MAX_CONTENT_LENGTH"] = 5 * 1024 * 1024
+def create_app(config_name="development"):
+    app = Flask(__name__, instance_relative_config=True)
 
-csrf = CSRFProtect(app)
+    app.config.from_object(
+        configurations.get(config_name, configurations["development"])
+    )
 
-from app import views
-from app.users.views import users_bp
-from app.products.views import products_bp
+    db.init_app(app)
+    migrate.init_app(app, db)
+    csrf.init_app(app)
 
-app.register_blueprint(users_bp, url_prefix="/users")
-app.register_blueprint(products_bp)
+    from app import views
+    from app.users.views import users_bp
+    from app.products.views import products_bp
+    from app.posts import post_bp
+    from app.posts import models
+    from app.posts import views as posts_views
+
+    app.register_blueprint(views.app_bp)
+    app.register_blueprint(users_bp, url_prefix="/users")
+    app.register_blueprint(products_bp)
+    app.register_blueprint(post_bp)
+
+    @app.errorhandler(404)
+    def page_not_found(error):
+        return render_template("404.html"), 404
+
+    return app

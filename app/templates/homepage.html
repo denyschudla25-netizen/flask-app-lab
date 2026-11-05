@@ -1,18 +1,74 @@
-
+```html
 {% extends "base.html" %}
 
+{% block title %}Головна | Flask Blog{% endblock %}
+
 {% block content %}
-<div class="container">
-    <h1>Лабораторна робота 3</h1>
-    <h2>Модульна структура. Blueprints</h2>
 
-    <p>Мій Flask-застосунок використовує модульну структуру.</p>
+<div class="p-5 mb-4 bg-white rounded-3 shadow-sm">
+    <div class="container-fluid py-4">
+        <h1 class="display-5 fw-bold">Ласкаво просимо до Flask Blog!</h1>
 
-    <ul>
-        <li><a href="{{ url_for('resume') }}">Резюме</a></li>
-        <li><a href="{{ url_for('contacts') }}">Контакти</a></li>
-        <li><a href="{{ url_for('users.greetings', name='John') }}">Привітання користувача</a></li>
-        <li><a href="{{ url_for('products.products_list') }}">Список товарів</a></li>
-    </ul>
+        <p class="col-md-8 fs-5">
+            Це вебзастосунок для створення, перегляду,
+            редагування та видалення публікацій.
+            Проєкт використовує Flask, SQLAlchemy та SQLite.
+        </p>
+
+        <a href="{{ url_for('posts.all_posts') }}"
+           class="btn btn-primary btn-lg">
+            Переглянути пости
+        </a>
+
+        <a href="{{ url_for('posts.create_post') }}"
+           class="btn btn-outline-success btn-lg">
+            Створити пост
+        </a>
+    </div>
 </div>
+
+<div class="row g-4">
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h4>Блог</h4>
+                <p>Переглядай усі доступні публікації.</p>
+                <a href="{{ url_for('posts.all_posts') }}"
+                   class="btn btn-outline-primary">
+                    Перейти
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h4>Резюме</h4>
+                <p>Інформація про автора проєкту.</p>
+                <a href="{{ url_for('main.resume') }}"
+                   class="btn btn-outline-primary">
+                    Переглянути
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h4>Контакти</h4>
+                <p>Контактна інформація.</p>
+                <a href="{{ url_for('main.contacts') }}"
+                   class="btn btn-outline-primary">
+                    Переглянути
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 {% endblock %}
+```

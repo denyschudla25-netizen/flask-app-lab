@@ -1,0 +1,22 @@
+.post-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-content {
+    white-space: pre-wrap;
+    line-height: 1.7;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    transition: 0.2s ease;
+}

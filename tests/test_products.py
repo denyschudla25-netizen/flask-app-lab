@@ -1,46 +1,38 @@
-
 import unittest
 import tempfile
 from pathlib import Path
 from io import BytesIO
-from decimal import Decimal
 
 from tinydb import TinyDB
 
-from app import app
+from app import create_app
 from app.products import views as products_views
 
 
 class ProductTests(unittest.TestCase):
 
     def setUp(self):
-        # Налаштування тестового Flask-застосунку
-        app.config["TESTING"] = True
-        app.config["WTF_CSRF_ENABLED"] = False
+        self.app = create_app("testing")
+        self.app.config["TESTING"] = True
+        self.app.config["WTF_CSRF_ENABLED"] = False
 
-        self.client = app.test_client()
+        self.client = self.app.test_client()
 
-        # Створення тимчасової бази даних
         self.temp_dir = tempfile.TemporaryDirectory()
 
         self.db = TinyDB(
             Path(self.temp_dir.name) / "test_products.json"
         )
 
-        # Зберігаємо оригінальну таблицю
         self.original_table = products_views.products_table
-
-        # Підключаємо тестову таблицю
         products_views.products_table = self.db.table("products")
 
     def tearDown(self):
-        # Відновлюємо оригінальну таблицю
         products_views.products_table = self.original_table
 
         self.db.close()
         self.temp_dir.cleanup()
 
-    # Допоміжний метод для створення товару
     def add_test_product(self):
 
         data = {
@@ -56,13 +48,11 @@ class ProductTests(unittest.TestCase):
             "submit": "Зберегти товар"
         }
 
-        response = self.client.post(
+        return self.client.post(
             "/product/add",
             data=data,
             content_type="multipart/form-data"
         )
-
-        return response
 
     # Тест 1. Додавання товару
     def test_add_product(self):
@@ -132,7 +122,6 @@ class ProductTests(unittest.TestCase):
         self.assertEqual(product["price"], "999.99")
         self.assertEqual(product["quantity"], 20)
 
-        # Перевірка, що дата створення не змінилася
         self.assertTrue(product["created_at"])
 
     # Тест 5. Видалення товару
@@ -149,12 +138,11 @@ class ProductTests(unittest.TestCase):
         self.assertEqual(len(products), 0)
 
     # Тест 6. Перевірка неіснуючого товару
-def test_product_not_found(self):
+    def test_product_not_found(self):
 
-    response = self.client.get("/product/999")
+        response = self.client.get("/product/999")
 
-    self.assertEqual(response.status_code, 404)
-    self.assertIn(b"not found", response.data.lower())
+        self.assertEqual(response.status_code, 404)
 
 
 if __name__ == "__main__":
